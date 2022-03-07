@@ -14,9 +14,9 @@ const images = [
 ];
 
 const elementsArray = images.map(
-  (elem) => `<li>< img src="${elem.url}" alt="${elem.alt}"></li>`
+  image => `<li><img src="${image.url}" alt="${image.alt}" width = 320></li>`
 );
 
 const gallery = document.querySelector(".gallery");
 gallery.style.display = "flex";
-gallery.insertAdjacentHTML("afterbegin", elementsArray);
+gallery.insertAdjacentHTML("afterbegin", elementsArray.join(''));
